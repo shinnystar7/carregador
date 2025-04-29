@@ -1,0 +1,161 @@
+<script>import { loginEmailSenha } from './authHandlers.js';
+  loginEmailSenha()
+  document.getElementById("googleLoginBtn").addEventListener("click", loginGoogle);
+  salvarPerfil();
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregador Solar Portátil - Produtos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/pages/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Carregador Solar Portátil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produtos.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="beneficios.html">Benefícios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalPerfil">
+                <img src="../icons/perfil.png" alt="Perfil">
+              </a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrinho">
+                <img src="../icons/carrinho.png" alt="Carrinho">
+              </a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalNotificacoes">
+                <img src="../icons/notificacoes.png" alt="Notificações">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="modalPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPerfilLabel">Perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+    <?php if (isset($_SESSION['usuario_id'])): ?>
+        <p>Nome: <?php echo $usuario['nome']; ?></p>
+        <p>Email: <?php echo $usuario['email']; ?></p>
+        <a href="logout.php" class="btn btn-danger">Sair</a>
+    <?php else: ?>
+        <p>Você não está logado.</p>
+        <a href="" data-bs-toggle="modal" data-bs-target="#modalLogin">Fazer Login</a>
+    <?php endif; ?>
+</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCarrinho" tabindex="-1" aria-labelledby="modalCarrinhoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCarrinhoLabel">Carrinho</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carrinho-conteudo">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="modal fade" id="modalNotificacoes" tabindex="-1" aria-labelledby="modalNotificacoesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNotificacoesLabel">Notificações</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Conteúdo da página de notificações...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <section id="produtos">
+      <div class="container">
+        <h2>Produtos</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/carregador-solar.jpg" alt="Carregador Solar Portátil">
+            <h3>Carregador Solar Portátil Básico</h3>
+            <button data-bs-toggle="modal" data-bs-target="#modalProduto1">Detalhes</button>
+            <button class="btn btn-primary btn-comprar" data-id="1">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="modalProduto1" tabindex="-1" aria-labelledby="modalProduto1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalProduto1Label">Carregador Solar Portátil Básico</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Informações detalhadas sobre o produto 1...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Carregador Solar Portátil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/solar off/script.js"></script>
+</body>
+
+</html>

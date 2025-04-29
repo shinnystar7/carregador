@@ -13,7 +13,12 @@ body {
     padding: 20px;
     
 }
-
+.custom-icone {
+    color: #081520; 
+    width: 24px;
+    height: 24px;
+  }
+  
 /* Header */
 header {
     background-color: #1f5989; /* Cor de fundo do cabeçalho mais clara */

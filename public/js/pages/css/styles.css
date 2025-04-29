@@ -1,0 +1,150 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #081520; /* Cor de fundo mais forte */
+    color: #cce8ff; /* Cor do texto branca para contraste */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.custom-icone {
+    color: #081520; 
+    width: 24px;
+    height: 24px;
+  }
+  
+/* Header */
+header {
+    background-color: #1f5989; /* Cor de fundo do cabeçalho mais clara */
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+.navbar{
+    background-color:#1f5989;
+}
+nav a {
+    text-decoration: none;
+    color: #1f5989;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav img {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+    background-color: #bbe1fa;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #1f5989;
+}
+
+.modal-body {
+    padding: 20px;
+    background-color: #3282b8;
+    color: #ffffff;
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: flex-end;
+    background-color: #1f5989;
+}
+
+.modal-footer button {
+    margin-left: 10px;
+    background-color: #1f5989;
+    color: #fff;
+    border: none;
+}
+
+/* Banner */
+#banner {
+    background-image: url("images/carregador-solar.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#banner h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#banner p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+#banner button {
+    background-color: #1f5989;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Sobre */
+#sobre {
+    padding: 60px 0;
+}
+
+#sobre h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1f5989;
+}
+
+#sobre p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color:#081520;
+    color: #081520;
+    padding: 20px 0;
+    text-align: center;
+}

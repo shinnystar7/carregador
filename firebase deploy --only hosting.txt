@@ -1,0 +1,19 @@
+firebase deploy --only hosting
+cd C:\xampp\htdocs\losar
+# 1. Ir para a pasta do projeto
+cd /caminho/do/seu/projeto
+
+# 2. Verificar alterações
+git status
+
+# 3. Adicionar todas as alterações
+git add .
+
+# 4. Fazer commit com mensagem
+git commit -m "Mensagem explicando a atualização"
+
+# 5. Enviar para o repositório remoto (se quiser)
+git push
+
+# 6. Fazer deploy para o Firebase Hosting
+firebase deploy
